@@ -12,6 +12,10 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/generator": "^7.12.13",
+    "@babel/parser": "^7.12.13",
+    "@babel/traverse": "^7.12.13",
+    "@babel/types": "^7.12.13",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

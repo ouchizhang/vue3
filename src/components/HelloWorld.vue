@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { onBeforeUpdate, onUpdated } from "vue";
+import { onBeforeUpdate, onMounted, onUpdated } from "vue";
 import ChildOfHello from  './ChildOfHello'
 
 export default {
@@ -20,14 +20,18 @@ export default {
         const setItemRef = (el) => {
             refList.push(el);
         };
+        onMounted(() => {
+            // alert(1&&2)
+        }) 
         onBeforeUpdate(() => {
             refList = [];
         });
         onUpdated(() => {
-            console.log(refList);
+            // console.log(refList);
         });
         const sayHello = (msg) => {
-            console.log(msg, 11111111111111)
+            refList.push(msg)
+            // console.log(msg, 11111111111111)
         }
         return {
             refList,
